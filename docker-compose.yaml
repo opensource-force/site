@@ -1,10 +1,11 @@
-version: '3.8'
+version: "3"
 
 services:
-  react-app:
-    container_name: osf-site-react-app
+  next-app:
+    container_name: osf-site-prod-next-app
     build:
-      context: ./client
+      context: .
       dockerfile: Dockerfile
+    restart: always
     ports:
-      - "9090:80"
+      - 9090:3000
