@@ -78,7 +78,7 @@ export default function Page() {
                             A MUD server based written in C#.
                         </h5>
                         <p className="text-base pt-4 font-light">
-                            I'm no better about READMEs.
+                            I&apos;m no better about READMEs.
                         </p>
                         <div className="text-base pt-12">
                             <div className="inline-flex items-center bg-gray-200 text-gray-700 rounded-full px-3 py-1 text-sm font-medium mr-2 mb-2">
