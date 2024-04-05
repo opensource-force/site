@@ -1,7 +1,7 @@
 export default function Home() {
 	return (
 		<main id="content" role="main">
-			<section className="bg-white dark:bg-gray-900">
+			<section className="bg-white dark:bg-gray-900 pb-5">
 				<div className="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28">
 					<div className="mr-auto place-self-center lg:col-span-7">
 						<h1 className="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">
@@ -302,79 +302,78 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-
 			<section className="bg-white dark:bg-gray-900">
-				<div className="max-w-screen-xl px-4 pb-8 mx-auto lg:pb-16">
-					<div className="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 sm:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
+				<div className="max-w-screen-xl pb-8 lg:pb-16 mx-auto ml-10 px-10 sm:ml-24 lg:ml-auto md:px-0">
+					<div className="flex flex-wrap text-gray-500 gap-y-12 dark:text-gray-400">
 						<a
 							href="https://archlinux.org/"
-							className="flex items-center lg:justify-center"
+							className="w-1/2 md:w-1/3 lg:w-1/6 flex items-center lg:justify-center"
 						>
 							<i className="text-8xl hover:text-gray-900 dark:hover:text-white devicon-archlinux-plain"></i>
 						</a>
 						<a
 							href="https://www.gnu.org/software/bash/"
-							className="flex items-center lg:justify-center"
+							className="w-1/2 md:w-1/3 lg:w-1/6 flex items-center lg:justify-center"
 						>
 							<i className="text-8xl hover:text-gray-900 dark:hover:text-white devicon-bash-plain"></i>
 						</a>
 						<a
 							href="https://dotnet.microsoft.com/"
-							className="flex items-center lg:justify-center"
+							className="w-1/2 md:w-1/3 lg:w-1/6 flex items-center lg:justify-center"
 						>
 							<i className="text-8xl hover:text-gray-900 dark:hover:text-white devicon-csharp-plain"></i>
 						</a>
 						<a
 							href="https://discord.js.org/"
-							className="flex items-center lg:justify-center"
+							className="w-1/2 md:w-1/3 lg:w-1/6 flex items-center lg:justify-center"
 						>
 							<i className="text-8xl hover:text-gray-900 dark:hover:text-white devicon-discordjs-plain"></i>
 						</a>
 						<a
 							href="https://flutter.dev/"
-							className="flex items-center lg:justify-center"
+							className="w-1/2 md:w-1/3 lg:w-1/6 flex items-center lg:justify-center"
 						>
 							<i className="text-8xl hover:text-gray-900 dark:hover:text-white devicon-flutter-plain"></i>
 						</a>
 						<a
 							href="https://go.dev/"
-							className="flex items-center lg:justify-center"
+							className="w-1/2 md:w-1/3 lg:w-1/6 flex items-center lg:justify-center"
 						>
 							<i className="text-8xl hover:text-gray-900 dark:hover:text-white devicon-go-plain"></i>
 						</a>
 						<a
 							href="https://nim-lang.org/"
-							className="flex items-center lg:justify-center"
+							className="w-1/2 md:w-1/3 lg:w-1/6 flex items-center lg:justify-center"
 						>
 							<i className="text-8xl hover:text-gray-900 dark:hover:text-white devicon-nim-plain"></i>
 						</a>
 						<a
 							href="https://www.postgresql.org/"
-							className="flex items-center lg:justify-center"
+							className="w-1/2 md:w-1/3 lg:w-1/6 flex items-center lg:justify-center"
 						>
 							<i className="text-8xl hover:text-gray-900 dark:hover:text-white devicon-postgresql-plain"></i>
 						</a>
 						<a
 							href="https://www.python.org/"
-							className="flex items-center lg:justify-center"
+							className="w-1/2 md:w-1/3 lg:w-1/6 flex items-center lg:justify-center"
 						>
 							<i className="text-8xl hover:text-gray-900 dark:hover:text-white devicon-python-plain"></i>
 						</a>
 						<a
 							href="https://ieee-isto.org/"
-							className="flex items-center lg:justify-center"
+							className="w-1/2 md:w-1/3 lg:w-1/6 flex items-center lg:justify-center"
 						>
 							<i className="text-8xl hover:text-gray-900 dark:hover:text-white devicon-cplusplus-plain"></i>
 						</a>
 						<a
 							href="https://react.dev/"
-							className="flex items-center lg:justify-center"
+							className="w-1/2 md:w-1/3 lg:w-1/6 flex items-center lg:justify-center"
 						>
 							<i className="text-8xl hover:text-gray-900 dark:hover:text-white devicon-react-original"></i>
 						</a>
 						<a
 							href="https://www.typescriptlang.org/"
-							className="flex items-center lg:justify-center"
+							className="w-1/2 md:w-1/3 lg:w-1/6 flex items-center lg:justify-center"
 						>
 							<i className="text-8xl hover:text-gray-900 dark:hover:text-white devicon-typescript-plain"></i>
 						</a>
