@@ -2,3 +2,4 @@
 LICENSE
 CNAME
 node_modules
+*.min.*
