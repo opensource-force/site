@@ -31,3 +31,35 @@ body {
 		text-wrap: balance;
 	}
 }
+
+.sideBar {
+	transition: all;
+	animation: slideInFromRight 0.5s;
+}
+
+.sideBarClosing {
+	transition: all;
+	animation: slideOutFromLeft 0.5s;
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+@keyframes slideOutFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+	50% {
+		transform: translateX(0);
+	}
+    100% {
+      transform: translateX(100%);
+	  visibility: hidden;
+    }
+  }
