@@ -16,17 +16,23 @@ const config: Config = {
 			keyframes: {
 				slideInFromRight: {
 					'0%': { transform: 'translateX(100%)' },
-					'100%': { transform: 'translateX(0)' },
-				  },
-				  slideOutToRight: {
+					'100%': { transform: 'translateX(0)' }
+				},
+				slideOutToRight: {
 					'0%': { transform: 'translateX(0)' },
-					'100%': { transform: 'translateX(100%)' },
-				  },
+					'100%': { transform: 'translateX(100%)' }
+				},
+				opacityDelay: {
+					'0%': { opacity: '0' },
+					'75%': { opacity: '0.2' },
+					'100%': { opacity: '0.3' }
+				}
 			},
 			animation: {
-				slideInFromRight: 'slideInFromRight 0.5s',
+				slideInFromRight: 'slideInFromRight ease-out 0.5s',
 				slideOutToRight: 'slideOutToRight 0.5s',
-			  },
+				opacityDelay: 'opacityDelay ease-in 0.8s'
+			}
 		}
 	},
 	plugins: []
