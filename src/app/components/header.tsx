@@ -4,7 +4,7 @@ import React from 'react';
 import Sidebar from './sidebar';
 
 export default function Header() {
-	const [navOpen, setNavOpen] = useState(true);
+	const [navOpen, setNavOpen] = useState(false);
 
 	return (
 		<header className="relative flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full text-sm">
@@ -32,9 +32,7 @@ export default function Header() {
 							aria-label="Toggle navigation"
 						>
 							<svg
-								className={`hs-collapse-open:hidden flex-shrink-0 size-4 ${
-									navOpen ? '' : 'opacity-0'
-								}`}
+								className={`hs-collapse-open:hidden flex-shrink-0 size-4`}
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
 								height="24"

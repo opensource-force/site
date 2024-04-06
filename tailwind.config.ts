@@ -18,20 +18,15 @@ const config: Config = {
 					'0%': { transform: 'translateX(100%)' },
 					'100%': { transform: 'translateX(0)' }
 				},
-				slideOutToRight: {
-					'0%': { transform: 'translateX(0)' },
-					'100%': { transform: 'translateX(100%)' }
-				},
 				opacityDelay: {
 					'0%': { opacity: '0' },
-					'75%': { opacity: '0.2' },
-					'100%': { opacity: '0.3' }
+					'66%': { opacity: '0.05' },
+					'100%': { opacity: '0.1' }
 				}
 			},
 			animation: {
-				slideInFromRight: 'slideInFromRight ease-out 0.5s',
-				slideOutToRight: 'slideOutToRight 0.5s',
-				opacityDelay: 'opacityDelay ease-in 0.8s'
+				slideInFromRight: 'slideInFromRight ease-out 0.3s',
+				opacityDelay: 'opacityDelay .3s'
 			}
 		}
 	},

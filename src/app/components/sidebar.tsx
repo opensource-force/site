@@ -4,10 +4,10 @@ export default function Sidebar({ navBarOpen, setNavBarOpen }) {
 	return (
 		<section
 			className={`z-100 h-screen animate-slideInFromRight flex fixed top-0 left-0 w-full sm:hidden ${
-				navBarOpen ? 'hidden' : ''
+				navBarOpen ? '' : 'hidden'
 			}`}
 		>
-			<div className="w-2/4 animate-opacityDelay bg-black bg-opacity-10"></div>
+			<div className="w-2/4 animate-opacityDelay ease-in bg-black opacity-20"></div>
 			<div className="bg-slate-50 w-2/4 dark:bg-slate-90">
 				<div className="py-2 px-4">
 					<button
