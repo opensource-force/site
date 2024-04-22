@@ -304,8 +304,8 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className='bg-white dark:bg-gray-900'>
-				<div className='pb-8 flex flex-wrap max-w-[85rem] justify-evenly ml-2 gap-8'>
+			<section className='bg-white dark:bg-gray-900 flex justify-center'>
+				<div className='pb-8 flex flex-wrap max-w-[85rem] justify-evenly gap-8 text-gray-500 dark:text-gray-400'>
 					<a
 						href='https://archlinux.org/'
 						className='flex-1 w-auto min-w-[180px] flex-content-center min-[977px]:min-w-[200px] basis-1/5'
