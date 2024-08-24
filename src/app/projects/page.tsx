@@ -3,9 +3,9 @@ import { Projects } from './projects';
 
 export default function Page() {
 	return (
-		<main id="content" role="main">
+		<main id='content' role='main'>
 			{Projects.map(project => (
-				<Project data={project} key={project.name} />
+				<Project data={project} key={project.name} keyN={project.name} />
 			))}
 		</main>
 	);

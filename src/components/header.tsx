@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import React from 'react';
 import Sidebar from './sidebar';
+import { DISCORD_INVITE_LINK } from '@/constants';
 
 export default function Header() {
 	const [navOpen, setNavOpen] = useState(false);
@@ -90,7 +91,7 @@ export default function Header() {
 						</a>
 						<a
 							className='flex items-center gap-x-2 font-medium text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-500'
-							href='https://discord.com/invite/DCznYuU4Ms'
+							href={DISCORD_INVITE_LINK}
 						>
 							<svg
 								className='flex-shrink-0 size-4'
