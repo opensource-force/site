@@ -1,5 +1,6 @@
-import { permanentRedirect } from 'next/navigation';
+import { DISCORD_INVITE_LINK } from '@/constants';
+import { redirect } from 'next/navigation';
 
 export async function GET() {
-	return permanentRedirect('https://discord.com/invite/DCznYuU4Ms');
+	return redirect(DISCORD_INVITE_LINK);
 }

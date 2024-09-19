@@ -1,4 +1,5 @@
-import React from 'react'
+import { DISCORD_INVITE_LINK } from '@/constants';
+import React from 'react';
 
 export default function Home() {
 	return (
@@ -381,5 +382,5 @@ export default function Home() {
 				</div>
 			</section>
 		</main>
-	)
+	);
 }

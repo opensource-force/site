@@ -1,78 +1,64 @@
-'use client';
-import { useState } from 'react';
 import React from 'react';
-import Sidebar from './sidebar';
 
-export default function Header() {
-	const [navOpen, setNavOpen] = useState(false);
-
+export default function Sidebar({
+	navBarOpen,
+	setNavBarOpen
+}: {
+	navBarOpen: boolean;
+	setNavBarOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
 	return (
-		<header className='relative flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full text-sm'>
-			<nav
-				className='relative max-w-[85rem] w-full mx-auto bg-white border-b border-gray-200 py-3 px-4 sm:py-0 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:border-x dark:bg-gray-800 dark:border-gray-700'
-				aria-label='Global'
-			>
-				<div className='flex items-center justify-between'>
-					<a
-						className='flex-none text-xl font-semibold dark:text-white'
-						href='/'
-						aria-label='Brand'
+		<section
+			className={`z-100 h-screen animate-slideInFromRight flex fixed top-0 left-0 w-full sm:hidden ${
+				navBarOpen ? '' : 'hidden'
+			}`}
+		>
+			<div className='w-2/4 animate-opacityDelay ease-in bg-black opacity-20'></div>
+			<div className='bg-slate-50 w-2/4 dark:bg-slate-90'>
+				<div className='py-2 px-4'>
+					<button
+						onClick={() => setNavBarOpen(!navBarOpen)}
+						type='button'
+						className='hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-lg border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800'
+						data-hs-collapse='#navbar-collapse-with-animation'
+						aria-controls='navbar-collapse-with-animation'
+						aria-label='Toggle navigation'
 					>
-						Open Source Force
-					</a>
-					<div className='sm:hidden'>
-						<button
-							onClick={() => {
-								setNavOpen(!navOpen);
-							}}
-							type='button'
-							className='hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-lg border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white'
-							data-hs-collapse='#navbar-collapse-with-animation'
-							aria-controls='navbar-collapse-with-animation'
-							aria-label='Toggle navigation'
+						<svg
+							className={'openNavIconClassName'}
+							xmlns='http://www.w3.org/2000/svg'
+							width='24'
+							height='24'
+							viewBox='0 0 24 24'
+							fill='none'
+							stroke='currentColor'
+							strokeWidth='2'
+							strokeLinecap='round'
+							strokeLinejoin='round'
 						>
-							<svg
-								className='hs-collapse-open:hidden flex-shrink-0 size-4'
-								xmlns='http://www.w3.org/2000/svg'
-								width='24'
-								height='24'
-								viewBox='0 0 24 24'
-								fill='none'
-								stroke='currentColor'
-								strokeWidth='2'
-								strokeLinecap='round'
-								strokeLinejoin='round'
-							>
-								<line x1='3' x2='21' y1='6' y2='6' />
-								<line x1='3' x2='21' y1='12' y2='12' />
-								<line x1='3' x2='21' y1='18' y2='18' />
-							</svg>
-						</button>
-					</div>
+							<path d='M18 6 6 18' />
+							<path d='m6 6 12 12' />
+						</svg>
+					</button>
 				</div>
-				<Sidebar navBarOpen={navOpen} setNavBarOpen={setNavOpen}></Sidebar>
-				<div
-					id='navbar-collapse-with-animation'
-					className='hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block'
-				>
-					<div className='flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7'>
+				<div id='menu' className='px-5 mt-5'>
+					<div className='flex flex-col space-y-6 font-bold text-base'>
 						<a
-							className='font-medium text-blue-600 sm:py-6 dark:text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600'
+							className='font-medium text-blue-600 dark:text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600'
 							href='/ '
 							aria-current='page'
 						>
 							Home
 						</a>
-
 						<a
-							className='font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600'
+							className='font-medium text-gray-500 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600'
 							href='/projects'
 						>
 							Projects
 						</a>
 
 						<a
-							className='flex items-center gap-x-2 font-medium text-gray-500 hover:text-blue-600 sm:border-s sm:border-gray-300 sm:my-6 sm:ps-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500'
+							className='flex items-center  font-medium text-gray-500 hover:text-blue-600  dark:text-gray-400 dark:hover:text-blue-500'
 							href='https://github.com/opensource-force'
 						>
 							<svg
@@ -113,7 +99,7 @@ export default function Header() {
 						</a>
 					</div>
 				</div>
-			</nav>
-		</header>
+			</div>
+		</section>
 	);
 }
