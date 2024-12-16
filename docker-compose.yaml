@@ -1,11 +1,7 @@
-version: '3'
-
 services:
   next-app:
     container_name: osf-site-prod-next-app
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/opensource-force/osf-site:latest
     restart: always
     ports:
       - 9090:3000
