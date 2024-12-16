@@ -3,7 +3,7 @@ name: Build and Deploy to GitHub Packages
 on:
   push:
     branches:
-      - release # Adjust to your default branch
+      - main # Adjust to your default branch
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
